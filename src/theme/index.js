@@ -5,7 +5,6 @@ import { createTheme, StyledEngineProvider, ThemeProvider as MUIThemeProvider } 
 //
 import palette from './palette';
 import typography from './typography';
-import GlobalStyles from './globalStyles';
 
 // ----------------------------------------------------------------------
 
@@ -23,9 +22,9 @@ export default function ThemeProvider({ children }) {
   return (
     <StyledEngineProvider injectFirst>
       <MUIThemeProvider theme={theme}>
-        {/*<CssBaseline />*/}
-        {/*<GlobalStyles />*/}
+        <CssBaseline />
         {children}
+
       </MUIThemeProvider>
     </StyledEngineProvider>
   );
