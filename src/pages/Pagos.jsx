@@ -5,48 +5,55 @@ import {m} from 'framer-motion';
 
 import {alpha, styled} from '@mui/material/styles';
 import {Box, Card, Container, Typography} from '@mui/material';
-import BrowseGalleryIcon from '@mui/icons-material/BrowseGallery';
-import SignLanguageIcon from '@mui/icons-material/SignLanguage';
 
 import HomeCarousel from "../components/HomeCarousel";
 
+
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
+import LayersRoundedIcon from '@mui/icons-material/LayersRounded';
+import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
+import FileCopyRoundedIcon from '@mui/icons-material/FileCopyRounded';
+import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded';
+
+
 const CARDS01 = [
     {
-        icon: <BrowseGalleryIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Rapido1',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        icon: <AutoStoriesIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
+        title: 'Contancia de Matrícula',
+        description: `Paga para tu constancia de matrícula. 
   `,
     },
     {
-        icon: <SignLanguageIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Rapido2',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        icon: <LayersRoundedIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
+        title: 'Constancia de Egresado',
+        description: `Paga para tu constancia de egresado.
   `,
     },
     {
-        icon: <BrowseGalleryIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Rapido3',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        icon: <DescriptionRoundedIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
+        title: 'Constancia Historial Académico de Notas',
+        description: `Paga para tu constancia de historial academico de notas.
   `,
     },
 ];
 const CARDS02 = [
     {
-        icon: <BrowseGalleryIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Rapido1',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        icon: <FileCopyRoundedIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
+        title: 'Constancia de Estudios',
+        description: `Paga para tu constancia de estudios.
   `,
     },
     {
-        icon: <SignLanguageIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Rapido2',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        icon: <ImportantDevicesIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
+        title: 'Constancia de Notas',
+        description: `Paga para tu constancia de notas.
   `,
     },
     {
-        icon: <BrowseGalleryIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Rapido3',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        icon: <MenuBookRoundedIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
+        title: 'Reinicio de Estudios',
+        description: `Paga para tu reinicio de estudio.
   `,
     },
 ];
@@ -119,7 +126,7 @@ function Pagos() {
                             ))}
 
                         </Grid>
-                        <Divider orientation="vertical" flexItem>VERTICAL</Divider>
+                        <Divider orientation="vertical" flexItem>//</Divider>
                         <Grid item xs>
                             {CARDS02.map((card, index) => (
                                 <m.div key={card.title}>
