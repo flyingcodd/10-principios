@@ -34,7 +34,7 @@ const navConfig = [
     {
         key: 3,
         title: 'Tramites que se puede pagar',
-        path: '/#/contactenos',
+        path: '/pagos',
     },
 ];
 

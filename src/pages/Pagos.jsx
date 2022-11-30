@@ -17,6 +17,8 @@ import { Box, Card, Container, Typography } from '@mui/material';
 import BrowseGalleryIcon from '@mui/icons-material/BrowseGallery';
 import SignLanguageIcon from '@mui/icons-material/SignLanguage';
 
+import HomeCarousel from "../components/HomeCarousel";
+
 /*Avance*/
 
 const CARDS = [
@@ -69,6 +71,7 @@ function Pagos(){
 
   const content = (
     <StyledRoot>
+      <HomeCarousel/>
         <Container>
             <Box
                 gap={{ xs: 3, lg: 10 }}
@@ -120,7 +123,7 @@ function Pagos(){
       <Grid item xs>
         {content}
       </Grid>
-  </Grid>
+    </Grid>
   ); 
 } 
 export default Pagos;
