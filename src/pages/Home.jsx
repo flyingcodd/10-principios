@@ -1,27 +1,19 @@
 import React from "react";
 import {Box, Container, Typography} from "@mui/material";
-import {styled} from '@mui/material/styles';
+//import {styled} from '@mui/material/styles';
 import HomeCarousel from "../components/HomeCarousel";
 
-const StyledRoot = styled('div')(({theme}) => ({
-    backgroundColor: theme.palette.background.neutral,
-    padding: theme.spacing(7, 0),
-    [theme.breakpoints.up('md')]: {
-        padding: theme.spacing(5, 0),
-    },
-}));
 
-import { m } from 'framer-motion';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Card, Container, Typography, Stack } from '@mui/material';
+//import { Box, Card, Container, Typography, Stack } from '@mui/material';
 import BrowseGalleryIcon from '@mui/icons-material/BrowseGallery';
 import SignLanguageIcon from '@mui/icons-material/SignLanguage';
 
 // ----------------------------------------------------------------------
 import { useTheme } from '@mui/material/styles';
 //import Box from '@mui/material/Box';
-//import Card from '@mui/material/Card';
+import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
@@ -80,6 +72,7 @@ function Home() {
   const theme = useTheme();
     return (
       <StyledRoot>
+        <HomeCarousel/>
       <Container>
           <Box
               gap={{ xs: 3, lg: 10 }}
@@ -91,7 +84,7 @@ function Home() {
               }}
           >
               {CARDS.map((card, index) => (
-                  <m.div key={card.title}>
+                  <div key={card.title}>
                       <StyledCard
                           sx={{
                               ...(index === 1 && {
@@ -109,7 +102,7 @@ function Home() {
 
                           <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
                       </StyledCard>
-                  </m.div>
+                  </div>
               ))}
           </Box>
       </Container>
