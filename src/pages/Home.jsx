@@ -1,4 +1,15 @@
 import React from "react";
+import {Box, Container, Typography} from "@mui/material";
+import {styled} from '@mui/material/styles';
+import HomeCarousel from "../components/HomeCarousel";
+
+const StyledRoot = styled('div')(({theme}) => ({
+    backgroundColor: theme.palette.background.neutral,
+    padding: theme.spacing(7, 0),
+    [theme.breakpoints.up('md')]: {
+        padding: theme.spacing(5, 0),
+    },
+}));
 
 import { m } from 'framer-motion';
 // @mui
