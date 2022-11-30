@@ -6,6 +6,7 @@ import {m} from 'framer-motion';
 import {alpha, styled} from '@mui/material/styles';
 import {Box, Card, Container, Typography} from '@mui/material';
 
+
 import HomeCarousel from "../components/HomeCarousel";
 
 
@@ -86,8 +87,11 @@ const StyledCard = styled(Card)(({theme}) => ({
 function Pagos() {
     return (
         <StyledRoot>
-            <HomeCarousel/>
+            <HomeCarousel/> 
             <Container>
+            <Typography variant="h4" color="primary" styled="center" sx={{mt: 2, mb: 2}}>
+              Pagos de tramites mas solicitados
+            </Typography>
                 <Box
                     gap={{xs: 3, lg: 10}}
                     display="grid"
