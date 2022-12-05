@@ -21,7 +21,7 @@ import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded';
 const CARDS01 = [
     {
         icon: <AutoStoriesIcon sx={{fontSize: 90, mb: 0, pb: 0}} color="primary"/>,
-        title: 'Contancia de Matrícula',
+        title: 'Constancia de Matrícula',
         description: `Paga para tu constancia de matrícula. 
   `,
     },
