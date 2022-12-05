@@ -22,26 +22,26 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 
-
+import Divider from "@mui/material/Divider";
 //-------------------------------------------------------------------------
 
 const CARDS = [
     {
         icon: <BrowseGalleryIcon sx={{ fontSize: 90, mb: 0, pb: 0 }} color="primary" />,
-        title: 'Rapido',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        title: 'ES RÁPIDO Y FÁCIL DE USAR',
+        description: `Ya sea desde una PC o un smartphone, Págalo.pe está disponible las 24 horas del día, los 365 días del año.
     `,
     },
     {
         icon: <SignLanguageIcon sx={{ fontSize: 90, mb: 0, pb: 0 }} color="primary" />,
-        title: 'Rapido',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        title: 'ACEPTAMOS TODAS LAS TARJETAS',
+        description: `Aceptamos tarjetas de débito o crédito de cualquier banco, siempre que estén afiliadas a Visa, Mastercard o American Express.
     `,
     },
     {
         icon: <BrowseGalleryIcon sx={{ fontSize: 90, mb: 0, pb: 0 }} color="primary" />,
-        title: 'Rapido',
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+        title: 'PAGO DE TRÁMITES Y SERVICIOS',
+        description: `Realiza pagos de los principales trámites y servicios de las entidades públicas.
     `,
     },
 ];
@@ -106,10 +106,12 @@ function Home() {
               ))}
           </Box>
       </Container>
-    
+      
+      
 
-      <Card sx={{ display: 'flex' }} id="bm" >
+      <Container sx={{ display: 'flex' }} id="bm" >
       <Container>
+      
       <Box sx={{ display: 'flex-direction', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h7">
@@ -120,12 +122,7 @@ function Home() {
           </Typography>
         </CardContent>
       </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 151 }}
-        image="D:\Universidad\22-2\IHC\10-principios\banking_card_cash_credit_finance_money_payment_icon_123228.png"
-        alt="Live from space album cover"
-      />
+      
       </Container>
 
       <Container>
@@ -139,12 +136,7 @@ function Home() {
           </Typography>
         </CardContent>
       </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 151 }}
-        image="/static/images/cards/live-from-space.jpg"
-        alt="Live from space album cover"
-      />
+    
       </Container>
       <Container>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -157,14 +149,9 @@ function Home() {
           </Typography>
         </CardContent>
       </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 151 }}
-        image=""
-        alt="Live from space album cover"
-      />
+      
       </Container>
-    </Card>
+    </Container>
 
   </StyledRoot>
   

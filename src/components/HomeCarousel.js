@@ -5,7 +5,7 @@ import {styled} from '@mui/material/styles';
 import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import heroImage from '../assets/home-hero.jpg'; // Import using relative path
+import heroImage from '../assets/io.jfif'; // Import using relative path
 
 function HomeCarousel(props) {
     var items = [
