@@ -7,6 +7,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import heroImage from '../assets/io.jfif'; // Import using relative path
 
+
 function HomeCarousel(props) {
     var items = [
         {
@@ -99,7 +100,7 @@ function Text(props) {
                 <br/>
             </Typography>
 
-            <Button color="primary" variant="contained" endIcon={<RequestQuoteIcon/>} size="large">
+            <Button color="primary" variant="contained" endIcon={<RequestQuoteIcon/>} size="large" href="/checkout">
                 Iniciar un Pago!
             </Button>
         </StyledDescription>
