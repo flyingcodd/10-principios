@@ -9,10 +9,10 @@ import Logo from "./Logo";
 const Tramites = [
     {label: 'Constancia de nota', year: 1994},
     {label: 'Historial Academico', year: 1972},
-    {label: 'The Godfather: Part II', year: 1974},
-    {label: 'The Dark Knight', year: 2008},
-    {label: '12 Angry Men', year: 1957},
-    {label: "Schindler's List", year: 1993},
+    {label: 'Constancia de Estudios', year: 1974},
+    {label: 'Constancia de Egresado', year: 2008},
+    {label: 'Constancia Historial Académico', year: 1957},
+    {label: "Reinicio de Estudios", year: 1993},
     {label: 'Pulp Fiction', year: 1994},
     {
         label: 'The Lord of the Rings: The Return of the King',
@@ -36,6 +36,7 @@ const navConfig = [
         title: 'Tramites que se puede pagar',
         path: '/pagos',
     },
+
 ];
 
 function Navbar() {

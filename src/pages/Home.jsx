@@ -111,7 +111,6 @@ function Home() {
 
       <Container sx={{ display: 'flex' }} id="bm" >
       <Container>
-      
       <Box sx={{ display: 'flex-direction', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h7">
@@ -122,7 +121,6 @@ function Home() {
           </Typography>
         </CardContent>
       </Box>
-      
       </Container>
 
       <Container>
@@ -136,8 +134,8 @@ function Home() {
           </Typography>
         </CardContent>
       </Box>
-    
       </Container>
+
       <Container>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
@@ -149,8 +147,8 @@ function Home() {
           </Typography>
         </CardContent>
       </Box>
-      
       </Container>
+      
     </Container>
 
   </StyledRoot>
