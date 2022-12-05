@@ -36,6 +36,16 @@ const navConfig = [
         title: 'Tramites que se puede pagar',
         path: '/pagos',
     },
+    {
+        key: 4,
+        title: 'Lista de pagados ',
+        path: '/table',
+    },
+    {
+        key: 4,
+        title: 'Preguntas frecuentes ',
+        path: '/preguntas',
+    },
 
 ];
 

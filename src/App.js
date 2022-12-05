@@ -10,6 +10,7 @@ import Preguntas from './pages/Preguntas';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import {Box} from "@mui/material";
+import Table from './pages/Table';
 
 const Layaut = () => {
     return (
@@ -36,10 +37,11 @@ const router = createBrowserRouter([
             {path: "/pagos", element: <Pagos/>},
             {path: "/perfil", element: <Perfil/>},
             {path: "/preguntas", element: <Preguntas/>},
+            {path: "/table", element: <Table/> },
         ],
     },
     {
-        path: "/Pergunta",
+        path: "/Perguntas",
         element: <h1>Hola </h1>,
     },
 ]);
