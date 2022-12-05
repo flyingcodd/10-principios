@@ -28,12 +28,12 @@ const navConfig = [
     },
     {
         key: 2,
-        title: 'Como se usa?',
-        path: '/#/contactenos',
+        title: 'Pagar',
+        path: '/checkout',
     },
     {
         key: 3,
-        title: 'Tramites que se puede pagar',
+        title: 'Tramites',
         path: '/pagos',
     },
     {
