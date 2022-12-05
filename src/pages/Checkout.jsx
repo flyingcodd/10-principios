@@ -12,10 +12,11 @@ import {
   StepLabel,
 } from "@mui/material";
 import React from "react";
+import HomeCarousel from "../components/HomeCarousel";
 const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
+  "Información",
+  "Metodo de pago",
+  "Pagos",
 ];
 
 function Checkout() {
@@ -65,13 +66,18 @@ function Checkout() {
   };
   return (
     <Box my={5}>
+      <HomeCarousel/>
       <Grid
         container
         direction="column"
         justifyContent="center"
         alignItems="center"
       >
+        
         <Card sx={{ minWidth: 500 }}>
+        <Typography gutterBottom variant="h5" component="div" xs={12} sx={{textAlign: 'center', padding: 2}}>
+          Checkout
+        </Typography>
           <Box sx={{ width: "500", padding: "20px" }}>
             <Stepper activeStep={activeStep}>
               {steps.map((label, index) => {
@@ -79,7 +85,7 @@ function Checkout() {
                 const labelProps = {};
                 if (isStepOptional(index)) {
                   labelProps.optional = (
-                    <Typography variant="caption">Optional</Typography>
+                    <Typography variant="caption">Opcional</Typography>
                   );
                 }
                 if (isStepSkipped(index)) {
@@ -109,9 +115,6 @@ function Checkout() {
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "col", pt: 2 }}>
                   <CardContent my={4} sx={{ width: "100%" }}>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Formulario de Checkout
-                    </Typography>
                     <Grid item xs={12} sm={12} padding={2}>
                       <TextField
                         variant="standard"
