@@ -2,7 +2,7 @@
 /* Tabla Ordenar y seleccionar  */
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
+import { alpha , styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -25,6 +25,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { Container } from '@mui/material';
+import HomeCarousel from "../components/HomeCarousel";
 
 function createData(procedure, date, condition, details) {
   return {
@@ -233,6 +234,14 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
+const StyledRoot = styled('div')(({theme}) => ({
+  backgroundColor: theme.palette.background.neutral,
+  padding: theme.spacing(7, 1),
+  [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(5, 0),
+  },
+}));
+
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
@@ -296,100 +305,103 @@ export default function EnhancedTable() {
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   return (
-    <Container>
-      <Box gap={{xs: 3, lg: 10}}
-          display="grid"
-          alignItems="center"
-          gridTemplateColumns={{
-              xs: 'repeat(1, 1fr)',
-              md: 'repeat(1, 1fr)',
-          }}>
-        <Paper sx={{ width: '100%', mb: 2 }}>
-          <EnhancedTableToolbar numSelected={selected.length} />
-            <TableContainer>
-                <Table
-                sx={{ minWidth: 750 }}
-                aria-labelledby="tableTitle"
-                size={dense ? 'small' : 'medium'}
-                >
-                <EnhancedTableHead
-                    numSelected={selected.length}
-                    order={order}
-                    orderBy={orderBy}
-                    onSelectAllClick={handleSelectAllClick}
-                    onRequestSort={handleRequestSort}
-                    rowCount={rows.length}
-                />
-                <TableBody>
-                    {/* if you don't need to support IE11, you can replace the `stableSort` call with:
-                    rows.sort(getComparator(order, orderBy)).slice() */}
-                    {stableSort(rows, getComparator(order, orderBy))
-                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((row, index) => {
-                        const isItemSelected = isSelected(row.procedure);
-                        const labelId = `enhanced-table-checkbox-${index}`;
+    <StyledRoot>
+      <HomeCarousel/> 
+      <Container>
+        <Box gap={{xs: 3, lg: 10}}
+            display="grid"
+            alignItems="center"
+            gridTemplateColumns={{
+                xs: 'repeat(1, 1fr)',
+                md: 'repeat(1, 1fr)',
+            }}>
+          <Paper sx={{ width: '100%', mb: 2 }}>
+            <EnhancedTableToolbar numSelected={selected.length} />
+              <TableContainer>
+                  <Table
+                  sx={{ minWidth: 750 }}
+                  aria-labelledby="tableTitle"
+                  size={dense ? 'small' : 'medium'}
+                  >
+                  <EnhancedTableHead
+                      numSelected={selected.length}
+                      order={order}
+                      orderBy={orderBy}
+                      onSelectAllClick={handleSelectAllClick}
+                      onRequestSort={handleRequestSort}
+                      rowCount={rows.length}
+                  />
+                  <TableBody>
+                      {/* if you don't need to support IE11, you can replace the `stableSort` call with:
+                      rows.sort(getComparator(order, orderBy)).slice() */}
+                      {stableSort(rows, getComparator(order, orderBy))
+                      .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                      .map((row, index) => {
+                          const isItemSelected = isSelected(row.procedure);
+                          const labelId = `enhanced-table-checkbox-${index}`;
 
-                        return (
-                        <TableRow
-                            hover
-                            onClick={(event) => handleClick(event, row.procedure)}
-                            role="checkbox"
-                            aria-checked={isItemSelected}
-                            tabIndex={-1}
-                            key={row.procedure}
-                            selected={isItemSelected}
-                        >
-                            <TableCell padding="checkbox">
-                            <Checkbox
-                                color="primary"
-                                checked={isItemSelected}
-                                inputProps={{
-                                'aria-labelledby': labelId,
-                                }}
-                            />
-                            </TableCell>
-                            <TableCell
-                            component="th"
-                            id={labelId}
-                            scope="row"
-                            padding="none"
-                            >
-                            {row.procedure}
-                            </TableCell>
-                            <TableCell align="right">{row.date}</TableCell>
-                            <TableCell align="right">{row.condition}</TableCell>
-                            <TableCell align="right">{row.details}</TableCell>
-                        </TableRow>
-                        );
-                    })}
-                    {emptyRows > 0 && (
-                    <TableRow
-                        style={{
-                        height: (dense ? 33 : 53) * emptyRows,
-                        }}
-                    >
-                        <TableCell colSpan={6} />
-                    </TableRow>
-                    )}
-                </TableBody>
-                </Table>
-            </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={rows.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
+                          return (
+                          <TableRow
+                              hover
+                              onClick={(event) => handleClick(event, row.procedure)}
+                              role="checkbox"
+                              aria-checked={isItemSelected}
+                              tabIndex={-1}
+                              key={row.procedure}
+                              selected={isItemSelected}
+                          >
+                              <TableCell padding="checkbox">
+                              <Checkbox
+                                  color="primary"
+                                  checked={isItemSelected}
+                                  inputProps={{
+                                  'aria-labelledby': labelId,
+                                  }}
+                              />
+                              </TableCell>
+                              <TableCell
+                              component="th"
+                              id={labelId}
+                              scope="row"
+                              padding="none"
+                              >
+                              {row.procedure}
+                              </TableCell>
+                              <TableCell align="right">{row.date}</TableCell>
+                              <TableCell align="right">{row.condition}</TableCell>
+                              <TableCell align="right">{row.details}</TableCell>
+                          </TableRow>
+                          );
+                      })}
+                      {emptyRows > 0 && (
+                      <TableRow
+                          style={{
+                          height: (dense ? 33 : 53) * emptyRows,
+                          }}
+                      >
+                          <TableCell colSpan={6} />
+                      </TableRow>
+                      )}
+                  </TableBody>
+                  </Table>
+              </TableContainer>
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={rows.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+          </Paper>
+          <FormControlLabel
+            control={<Switch checked={dense} onChange={handleChangeDense} />}
+            label="Dense padding"
           />
-        </Paper>
-        <FormControlLabel
-          control={<Switch checked={dense} onChange={handleChangeDense} />}
-          label="Dense padding"
-        />
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </StyledRoot>
   );
 }
 

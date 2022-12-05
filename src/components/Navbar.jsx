@@ -36,6 +36,11 @@ const navConfig = [
         title: 'Tramites que se puede pagar',
         path: '/pagos',
     },
+    {
+        key: 4,
+        title: 'Lista de tickets pagados ',
+        path: '/table',
+    },
 ];
 
 function Navbar() {
