@@ -34,8 +34,8 @@ function createData(procedure, date, condition, details) {
 }
 
 const rows = [
-  createData('Constancia de Matrícula','10-12-2022','Proceso','ver mas' ),
-  createData(),
+  createData('Constancia de Matrícula','25-11-2022','Proceso','ver mas' ),
+  createData('Constancia de Notas', '05-12-2022','Terminado','ver mas'),
   createData(),
   /*createData('Cupcake', 305, 3.7, 67),
   createData('Donut', 452, 25.0, 51),
@@ -202,7 +202,7 @@ function EnhancedTableToolbar(props) {
       {numSelected > 0 ? (
         <Tooltip title="Edit">
           <IconButton>
-            <EditIcon />
+            
           </IconButton>
         </Tooltip>
       ) : (
@@ -214,7 +214,7 @@ function EnhancedTableToolbar(props) {
       ) }
 
 {numSelected > 0 ? (
-        <Tooltip title="delete">
+        <Tooltip title="Cancelar">
           <IconButton>
             <DeleteIcon />
           </IconButton>

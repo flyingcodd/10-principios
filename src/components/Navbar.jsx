@@ -1,8 +1,9 @@
 import React from "react";
 import {Link as RouterLink} from 'react-router-dom';
 // @mui
-import {AppBar, Autocomplete, Box, Container, InputAdornment, InputBase, Link, Stack, Toolbar} from '@mui/material';
+import {AppBar, Autocomplete, Box, Container, InputAdornment, InputBase, Link, Stack, Toolbar, Button} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import Logo from "./Logo";
 
@@ -46,6 +47,12 @@ const navConfig = [
         title: 'Preguntas frecuentes ',
         path: '/preguntas',
     },
+    ,
+    {
+        key: 6,
+        title: '¿Como se usa? ',
+        path: '/guia',
+    },
 
 ];
 
@@ -84,6 +91,9 @@ function Navbar() {
                                 </div>
                             )}
                         />
+                        <Button color="primary" variant="contained" endIcon={<AccountCircleIcon/>} size="large" href="/checkout">
+                        Login
+                        </Button>
                     </Toolbar>
 
                 </Container>
@@ -97,6 +107,7 @@ function Navbar() {
                             )}
                         </Stack>
                     </Container>
+                    
                 </Toolbar>
             </AppBar>
         </>

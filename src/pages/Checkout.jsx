@@ -76,7 +76,7 @@ function Checkout() {
         
         <Card sx={{ minWidth: 500 }}>
         <Typography gutterBottom variant="h5" component="div" xs={12} sx={{textAlign: 'center', padding: 2}}>
-          Checkout
+          Registro de pago
         </Typography>
           <Box sx={{ width: "500", padding: "20px" }}>
             <Stepper activeStep={activeStep}>
