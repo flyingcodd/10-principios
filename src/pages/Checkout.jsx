@@ -64,6 +64,10 @@ function Checkout() {
   const handleReset = () => {
     setActiveStep(0);
   };
+  
+  const [firstName, setFirstName] = React.useState("");
+  const [errorTitulo, setErrorTitulo] = React.useState(false);
+  const [leyenda, setLeyenda] = React.useState("");
   return (
     <Box my={5}>
       <HomeCarousel/>
@@ -116,10 +120,20 @@ function Checkout() {
                 <Box sx={{ display: "flex", flexDirection: "col", pt: 2 }}>
                   <CardContent my={4} sx={{ width: "100%" }}>
                     <Grid item xs={12} sm={12} padding={2}>
-                      <TextField
+                    <TextField
+                        onChange={(e) => {setFirstName(e.target.value);
+                        if (firstName.length > 5) {
+                          setErrorTitulo(true);
+                          setLeyenda("El titulo debe tener menos de 5 caracteres");
+                        }else{
+                          setErrorTitulo(false);
+                          setLeyenda("");
+                        }}}
+                        error={errorTitulo}
                         variant="standard"
                         label="First Name"
                         fullWidth
+                        helperText={leyenda}
                       />
                     </Grid>
                     <Grid item xs={12} sm={12} padding={2}>
